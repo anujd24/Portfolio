@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project1.png";
 import project2 from "../assets/projects/project2.png";
 import project3 from "../assets/projects/project3.png";
 import project4 from "../assets/projects/project4.png";
+import project5 from "../assets/projects/project5.png";
 
 export const HERO_CONTENT = `I’m an aspiring full stack developer with a strong passion for crafting robust and scalable web applications. While I’m at the beginning of my professional journey, I’ve been actively learning and building with front-end technologies like React and Next.js, along with back-end tools such as Node.js, MySQL, PostgreSQL, and MongoDB.
 
@@ -41,6 +42,17 @@ My goal is to continuously grow as a developer and leverage this diverse and evo
 // ];
 
 export const PROJECTS = [
+  {
+    title: "GoPay - A Digital Wallet",
+    image : project5,
+    description :[
+      ` Full-stack digital wallet with Next.js (TypeScript), TailwindCSS, and Prisma`,
+      `Hosted on AWS EC2 with Docker for 99.8% uptime; CI/CD workflows reduced deployment time by 85%`,
+      `Implemented P2P transfers, transaction history (Success/Failure/Processing), and real-time balance tracking.`
+    ],
+    technologies : ["Next.js", "AWS", "Docker","TypeScript", "CI/CD", "React.js", "TailwindCSS", "PostgreSQL", "Prisma"],
+    link : "https://ad.finpaynowcenter.tech/"
+  },
   {
     title: "BitCrate - A gaming console website",
     image: project1,
@@ -98,7 +110,7 @@ using App Router.`
     ],
     technologies: ["Next.js", "React.js", "TypeScript", "TailwindCSS", "PostgreSQL", "Prisma"],
     link: "https://electra-ui-fogp-o1xl7tier-anuj-dubeys-projects.vercel.app/"
-  },
+  }
 ];
 
 export const CONTACT = {
