@@ -1,6 +1,7 @@
 import profilePic from "../assets/anujProfilePic.jpg"
 import {HERO_CONTENT} from "../constants"
 import { motion } from "framer-motion"
+import resume from "../assets/Resume.pdf"
 
 
 const containerVariants = {
@@ -24,8 +25,8 @@ const Hero = () =>{
     return (
         <div className="pb-4 lg:mb-36">
             <div className="flex flex-wrap lg:flex-row-reverse">
-                <div className="w-full lg:w-1/2">
-                    <div className="flex justify-center lg:p-4">
+                <div className="w-full lg:w-1/2 mt-16">
+                    <div className="flex justify-center  lg:p-2">
                         <motion.img 
                         src={profilePic} 
                         alt="Anuj Dubey" 
@@ -64,7 +65,7 @@ const Hero = () =>{
 
                          <motion.a 
                          variants={childVariants}
-                         href="../ADResume(3)(1).pdf"
+                         href={resume}
                          target="_blank"
                          download
                          className="bg-white rounded-full p-4 text-sm
