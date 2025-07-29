@@ -1,8 +1,6 @@
 import profilePic from "../assets/anujProfilePic.jpg"
 import {HERO_CONTENT} from "../constants"
 import { motion } from "framer-motion"
-import resume from "../assets/Resume.pdf"
-
 
 const containerVariants = {
     hidden : { opacity: 0, x: -100},
@@ -65,7 +63,7 @@ const Hero = () =>{
 
                          <motion.a 
                          variants={childVariants}
-                         href={resume}
+                         href={"https://drive.google.com/file/d/1NFBKsomPV6G-Q3Y5UuDXYG-cTVlfByXt/view?usp=sharing"}
                          target="_blank"
                          download
                          className="bg-white rounded-full p-4 text-sm
