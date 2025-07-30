@@ -232,6 +232,7 @@ const Technologies = () =>{
             <div style={{background: '#4caf50'}} className="cube" />
             <div style={{background: '#2196f3'}} className="cube" />
           </div>
+          
           <div className="face bottom">
             <div style={{background: '#ffffff'}} className="cube" />
             <div style={{background: '#4caf50'}} className="cube" />
