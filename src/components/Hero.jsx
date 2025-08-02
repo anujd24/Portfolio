@@ -1,4 +1,4 @@
-import profilePic from "../assets/anujProfilePic.jpg"
+import portfolio from "../assets";
 import {HERO_CONTENT} from "../constants"
 import { motion } from "framer-motion"
 import styled from 'styled-components';
@@ -27,7 +27,7 @@ const Hero = () =>{
                 <div className="w-full lg:w-1/2 mt-16">
                     <div className="flex justify-center lg:p-2">
                         <motion.img 
-                            src={profilePic} 
+                            src={portfolio} 
                             alt="Anuj Dubey" 
                             className="border border-stone-900 rounded-3xl" 
                             width={650}
@@ -77,7 +77,6 @@ const Hero = () =>{
                             Download Resume
                         </motion.a>
 
-                        {/* Loaders - shown only on mobile below the Download Resume button */}
                         <div className="lg:hidden w-full flex justify-center py-4">
                             <div className="flex items-center space-x-4">
                                 <StyledWrapper>
