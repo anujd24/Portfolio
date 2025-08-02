@@ -1,4 +1,4 @@
-import portfolio from "../assets/portfolio.jpg"
+import portfolio from "../assets/portfolio.png"
 import {HERO_CONTENT} from "../constants"
 import { motion } from "framer-motion"
 import styled from 'styled-components';
