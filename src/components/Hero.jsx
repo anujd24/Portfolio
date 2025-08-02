@@ -1,4 +1,4 @@
-import profilePic from "../assets/anujProfilePic.jpg"
+import portfolio from "../assets/portfolio.jpg"
 import {HERO_CONTENT} from "../constants"
 import { motion } from "framer-motion"
 import styled from 'styled-components';
@@ -25,13 +25,12 @@ const Hero = () =>{
         <div className="pb-4 lg:mb-36">
             <div className="flex flex-wrap lg:flex-row-reverse">
                 <div className="w-full lg:w-1/2 mt-16">
-                    <div className="flex justify-center lg:p-2">
+                    <div className="flex justify-center size-12/12 lg:p-0">
                         <motion.img 
-                            src={profilePic} 
+                            src={portfolio} 
                             alt="Anuj Dubey" 
                             className="border border-stone-900 rounded-3xl" 
-                            width={650}
-                            height={650}
+                            width={340}
                             initial={{x:100, opacity:0}}
                             animate={{x:0, opacity:1}}
                             transition={{duration:1, delay:1.5}}
@@ -77,7 +76,6 @@ const Hero = () =>{
                             Download Resume
                         </motion.a>
 
-                        {/* Loaders - shown only on mobile below the Download Resume button */}
                         <div className="lg:hidden w-full flex justify-center py-4">
                             <div className="flex items-center space-x-4">
                                 <StyledWrapper>
@@ -102,7 +100,6 @@ const Hero = () =>{
                     </motion.div>
                 </div>
 
-                {/* Desktop version of loaders (positioned under profile pic) */}
                 <div className="hidden lg:flex lg:w-1/2 relative">
                     <div className="flex justify-between absolute bottom-0 w-full px-4">
                         <StyledWrapper>
@@ -129,7 +126,6 @@ const Hero = () =>{
     )
 }
 
-// Updated styled components with better mobile scaling
 const LoaderBase = styled.div`
   .loader, .loader2 {
     width: 32px;
