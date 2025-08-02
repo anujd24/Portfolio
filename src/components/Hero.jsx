@@ -38,6 +38,7 @@ const Hero = () =>{
                     </div>
                 </div>
                 
+                
                 <div className="w-full lg:w-1/2">
                     <motion.div 
                         initial="hidden"
