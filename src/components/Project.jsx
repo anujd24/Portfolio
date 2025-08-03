@@ -1,5 +1,7 @@
 import { PROJECTS } from "../constants";
 import styled from 'styled-components';
+import { CardBody, CardContainer, CardItem } from "../components/3d-cad";
+
 
 const Project = () => {
   return (
@@ -7,45 +9,65 @@ const Project = () => {
       <h1 className="my-20 text-center text-4xl">Projects</h1>
       <div>
         {PROJECTS.map((project, index) => (
-          <div key={index} className="relative mb-8 group hover:bg-neutral-900/10 rounded-lg transition-all duration-300">
-            {/* Project Content */}
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-wrap lg:justify-center p-4 relative z-10"
-            >
-              <div className="w-full lg:w-1/4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  width={250}
-                  height={250}
-                  className="mb-6 rounded"
-                />
-              </div>
-              <div className="w-full max-w-xl lg:w-3/4">
-                <h6 className="mb-2 font-semibold text-orange-300">{project.title}</h6>
-                <ul className="mb-4 list-disc list-inside text-neutral-400">
-                  {project.description.map((point, index) => (
-                    <li key={index}>{point}</li>
-                  ))}
-                </ul>
-                {project.technologies.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-orange-300"
+          <CardContainer key={index} className="relative mb-8 group hover:bg-neutral-900/10 rounded-lg transition-all duration-300">
+            <CardBody className="w-full">
+              <CardItem
+                translateZ={20}
+                className="w-full"
+              >
+                {/* Project Content */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-wrap lg:justify-center  relative z-10"
+                >
+                  {/* Image Section */}
+                  <CardItem
+                    translateZ={50}
+                    rotateX={5}
+                    rotateY={5}
+                    className="w-full lg:w-1/4"
                   >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </a>
-          
-            <div className="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10">
-              <MatrixPattern />
-            </div>
-          </div>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      width={250}
+                      height={250}
+                      className="pr-12 rounded w-[1000px] h-[250px] object-contain"
+                    />
+                  </CardItem>
+                  
+                  {/* Details Section */}
+                  <CardItem
+                    translateZ={30}
+                    className="w-full max-w-xl lg:w-3/4"
+                  >
+                    <h6 className="mb-2 pt-2 font-semibold text-orange-300">{project.title}</h6>
+                    <ul className="mb-4 list-disc list-inside text-neutral-400">
+                      {project.description.map((point, index) => (
+                        <li key={index}>{point}</li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-orange-300 mb-2"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </CardItem>
+                </a>
+                
+                <div className="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10">
+                  <MatrixPattern />
+                </div>
+              </CardItem>
+            </CardBody>
+          </CardContainer>
         ))}
       </div>
     </div>

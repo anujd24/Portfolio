@@ -71,7 +71,7 @@ const Hero = () =>{
                             href={"https://drive.google.com/file/d/1NFBKsomPV6G-Q3Y5UuDXYG-cTVlfByXt/view?usp=sharing"}
                             target="_blank"
                             download
-                            className="bg-white rounded-full p-4 text-sm text-stone-800 mb-4 lg:mb-10"
+                            className="bg-white rounded-full p-4 text-sm text-stone-800 mb-4 lg:mb-10 "
                         >
                             Download Resume
                         </motion.a>
